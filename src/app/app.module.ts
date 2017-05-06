@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipiesComponent } from './recipies/recipies.component';
+import{ShoppingListService} from './shopping-list/shopping-list.service';
 import { RecipieListComponent } from './recipies/recipie-list/recipie-list.component';
 import { RecipieDetailComponent } from './recipies/recipie-detail/recipie-detail.component';
 import { RecipieItemComponent } from './recipies/recipie-list/recipie-item/recipie-item.component';
@@ -30,7 +31,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
