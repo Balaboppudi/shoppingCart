@@ -26,6 +26,10 @@ recipieSelected = new EventEmitter<Recipie>();
       return this.recipies.slice();
   }
 
+
+getRecipie(index:number){
+  return this.recipies[index];
+}
   addIngredientsToShoppingList(ingredients:Ingredient[]){
     this.shoppingListService.addIngredients(ingredients);
   }

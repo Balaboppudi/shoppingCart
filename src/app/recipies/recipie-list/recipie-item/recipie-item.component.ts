@@ -8,13 +8,13 @@ import {RecipieService} from '../../recipie.service';
 })
 export class RecipieItemComponent implements OnInit {
 @Input() recipie : Recipie;
+@Input() index :number;
   constructor(private recipieService:RecipieService) { }
 
   ngOnInit() {
+    
   }
-  onSelected(){
-    this.recipieService.recipieSelected.emit(this.recipie);
-  }
+ 
 
   
 

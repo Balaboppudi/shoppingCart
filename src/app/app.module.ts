@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipiesComponent } from './recipies/recipies.component';
@@ -13,7 +14,9 @@ import { RecipieItemComponent } from './recipies/recipie-list/recipie-item/recip
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
-
+import {AppRoutingModule} from './app-routing-module';
+import { RecipiesStartComponent } from './recipies/recipies-start/recipies-start.component';
+import { RecipiesEditComponent } from './recipies/recipies-edit/recipies-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +27,15 @@ import { DropdownDirective } from './shared/dropdown.directive';
     RecipieItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipiesStartComponent,
+    RecipiesEditComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
