@@ -18,6 +18,7 @@ export class ShoppingListComponent implements OnInit,OnDestroy {
   this.subscription =  this.shoppingListService.ingredientsChanged
     .subscribe(
       (ingredients:Ingredient[])=>{
+        console.log("test");
         this.ingredients = ingredients;
       }
     )
