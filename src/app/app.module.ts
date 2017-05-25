@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 
@@ -17,6 +17,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import {AppRoutingModule} from './app-routing-module';
 import { RecipiesStartComponent } from './recipies/recipies-start/recipies-start.component';
 import { RecipiesEditComponent } from './recipies/recipies-edit/recipies-edit.component';
+import{RecipieService} from './recipies/recipie.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,10 +35,11 @@ import { RecipiesEditComponent } from './recipies/recipies-edit/recipies-edit.co
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService,RecipieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
